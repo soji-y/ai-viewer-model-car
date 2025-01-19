@@ -8,7 +8,7 @@ https://drive.google.com/drive/folders/1U-O0aMDx8fvX3Sgih1Qyqp4MVYoM8WFH
 2. 「車判別モデル」を上記パスからダウンロード
 3. ダウンロードした「車判別モデル」を任意の場所に解凍
 4. 必要なライブラリのインストール\
-(1) pytorchのインストール
+(1) pytorchのインストール\
 (2) 「requirements.txt」のインストール
 5. 「AI Viewer」の実行\
 python ai_viewer.py
