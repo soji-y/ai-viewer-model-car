@@ -27,7 +27,7 @@ GPU：Geforce RTX4080 (GPUメモリ16GB以上)
 ```
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-(4) クローンしたフォルダに遷移し「requirements.txt」のライブラリをインストール
+(3) クローンしたフォルダに遷移し「requirements.txt」のライブラリをインストール
 ```
 pip3 install -r requirements.txt
 ```
