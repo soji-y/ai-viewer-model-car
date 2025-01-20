@@ -12,6 +12,7 @@ GPU：Geforce RTX4080 (GPUメモリ16GB以上)
 - Geforce RTX4090
 - Windows11
 - CUDA 12.1
+- Python 3.12.8
 
 ## 動作画面
 !["フォーム画像"](https://github.com/soji-y/ai-viewer-model-car/blob/master/images/ai_viewer_form.png)
