@@ -14,7 +14,7 @@ GPU：Geforce RTX4080 (GPUメモリ16GB以上)
 - CUDA 12.1
 
 ## 動作画面
-
+!["フォーム画像"](https://github.com/soji-y/ai-viewer-model-car/blob/master/images/ai_viewer_form.png)
 
 ## 使用方法
 1. 本リポジトリをクローン
