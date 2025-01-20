@@ -5,76 +5,36 @@ default:
   user:
     name: User
     chat_color: black
-    chat_bg_color: light cyan
       
   actor:
     path: ./models/Idefics2-8B-Instruct_Car
     
-settings: # 基本設定
-  actor_data: actor_data.yaml
-
-  actor_auto_load: True
-  guest_auto_load: False
-  thread_model_load: True # キャラクタロード時にモデルを別スレッドでロード
+settings:
+  actor_data: actor_data.yaml # モデル設定ファイル名
+  actor_auto_load: True # モデル自動読み込み
+  thread_model_load: True # モデルロード時にモデルを別スレッドでロード
   random_seed: -1 # ランダムシード値(-1は完全ランダム)
-  load_actor_max: 2 # 読み込み可能な最大キャラクタ数(最小1)
-  use_cpu_flg: False # CPUを使用フラグ
-
-  chat_color_flg: True
+  use_cpu_flg: False # CPU使用
+  chat_color_flg: True # フォントの文字色を変更
   master_size: [800, 600] # 初期メイン画面サイズ
   actor_win_size: [220, 220] # キャラウィンドウ画像サイズ
   chat_canv_flg: False # チャットのキャンパスを初期表示(Falseのときは非表示)
-  chat_hist_flg: True # チャット履歴の有無
   img_redraw_msec: 16 # # メイン画像再描画時間(ミリ秒)
-
-  chat_emotion_flg: True # チャット中に感情分析を取得するフラグ
-  user_emotion_flg: False # ユーザーからのチャットプロンプトに感情分析を含めるフラグ
-  # no_top_msg_flg: True # チャットの先頭につく＜会話＞文字列なし
-  # chat_emotion_model: lxyuan/distilbert-base-multilingual-cased-sentiments-student
-  # chat_view_mode_def: 1 # チャット履歴の初期表示モード
-  #chat_view_time_flg: True # チャット履歴の応答時間ON/OFF(シンプル表示時は無効)
-  discussion_turn_time: 20 # ディスカッションの1ターンにかける時間(早すぎるとChatGPT取得エラーとなる)
-  chat_no_sys_flg: False # チャットにシステムプロンプト(【時刻】【日付】も含む)を含めないフラグ(これをFalseにしてもキャラごとに設定可能)
-  sys_get_profile_flg: True # プロフィールを取得
-  sys_get_time_flg: True # 時刻を取得
-  sys_get_weather_flg: True # 天気を取得
-  sys_area_codes: [14, 4610] # 天気を取得するエリアコード
-
   max_tokens:  256 # 最大トークン数
+  chat_hist_flg: True # チャット履歴の有無
   max_sentences: 5 # 最大行数(通常チャット時)
   max_sentences_hist: 5 # 返信の最大行数(履歴チャット時)
-  # max_chat_hist: 30 # 覚えていられるチャット履歴の数
-  # chat_kana_flg: True # チャットの名前表記をふりがなにする
   chat_view_sec: 0.02 # 返信メッセージが画面に表示される間隔
-  def_chat_mode: 1 # 起動時チャットモード(0:チャット, 1:チャットEX, 2:キャラトーク, 3:ディスカッション, 4:インタープリター, 9:イベント)
-  actor_talk_num: 100 # ディスカッション時の会話数
-  chat_discussion_num: 5 # ディスカッション時の応答(往復)回数
-  debug: False # デバッグフラグ
   new_line_num: 0 # チャットの会話間隔(空行数)
-  word_try_max: 100 # [Word]のトライ回数
-  add_instruct_flg: False # 会話履歴の前に指示文を付けて送信するか
-
   def_cuda_num: 0 # デフォルトのメインCuda番号
   def_sub_cuda_num: 1 # デフォルトのサブCuda番号
-
-  multi_chat_flg: True # 複数キャラ読み込んだときにチャットを複数人で実行する
-
-  status_bar_flg: True # ステータスバーの表示フラグ
+  status_bar_flg: True # ステータスバーの表示
   status_bar_msg_msec: 10000 # ステータスバーのメッセージ表示時間
   chat_datetime_flg: True # チャット時に日付日時を取得する
-  no_chat_key: ※ # 先頭にこの文字が入っていたら直接入力される文字
-  chat_split_key: --- # チャットを区切る文字列(あんまり使ってない)
-  rejected_log_flg: False # ユーザーが「リトライ」した瞬間に記録されるログ(DPO学習用)
-
+  no_chat_key: ※ # 先頭にこの文字が入っていたら応答なしとなる文字
+  chat_split_key: --- # チャットを区切る文字列
   name_no_msg_flg: True # 名前をメッセージに含めない
-  header_id_replace_flg: False # Llama3などのヘッダーIDを名前などに置換するフラグ
-  open_input_window: False # 起動時に入力画像ウィンドウを開く
-
-  memory_confirmation_flg: False # メモリ保存確認フラグ
   input_image_max: 1024 # 入力画像の最大サイズ
-
-summary:
-  path: ../@AI_data/summary_data
 
 form:
   font: # フォント
@@ -82,10 +42,6 @@ form:
     prof: [meiryo, 9] # プロフィール
   color_txt_chat: "gray97"
 
-# var_default: # メニューのチェックのデフォルト設定
-#   var_img_record: True  # 画像の保存
-
 log:
   output_flg: False
   path: ./log
-
