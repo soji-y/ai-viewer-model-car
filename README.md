@@ -3,6 +3,18 @@
 https://drive.google.com/drive/folders/1U-O0aMDx8fvX3Sgih1Qyqp4MVYoM8WFH
 - **Idefics2-8B-Instruct_Car.zip**
 
+## 推奨環境
+GPU：Geforce RTX4080 (GPUメモリ16GB以上)
+
+## 動作確認済環境
+- Intel(R) Core(TM) i9-14900K 3.20 GHz
+- RAM 64 GB
+- Geforce RTX4090
+- Windows11
+- CUDA 12.1
+
+## 動作画面
+
 ## 使用方法
 1. 本リポジトリをクローン
 2. 「車判別モデル」を上記パスからダウンロード
