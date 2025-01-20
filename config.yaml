@@ -8,7 +8,7 @@ default:
     chat_bg_color: light cyan
       
   actor:
-    path: ./model/Idefics2-8B-Instruct_Car
+    path: ./models/Idefics2-8B-Instruct_Car
     
 settings: # 基本設定
   actor_data: actor_data.yaml
@@ -19,7 +19,6 @@ settings: # 基本設定
   random_seed: -1 # ランダムシード値(-1は完全ランダム)
   load_actor_max: 2 # 読み込み可能な最大キャラクタ数(最小1)
   use_cpu_flg: False # CPUを使用フラグ
-  use_ctranslate2_flg: True # cTranslate2を使用するフラグ
 
   chat_color_flg: True
   master_size: [800, 600] # 初期メイン画面サイズ
