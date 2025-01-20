@@ -872,7 +872,7 @@ class Chat():
     return response.strip()
 
 
-# ◆TkinterでのGUIクラス
+# TkinterでのGUIクラス
 class Application(tk.Frame):
 
   # ステータスバー
